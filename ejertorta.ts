@@ -18,9 +18,9 @@ let esempate : boolean = false;
 for (let i = 1; i <= numParticipantes; i++) {
 
   console.log("torta " + i);
-  let sabor : number = rs.questionInt("Ingrese puntuacion de sabor: ");
-  let presentacion : number = rs.questionInt("Ingrese puntuacion de presentacion: ");
-  let dificultad : number = rs.questionInt("Ingrese puntuacion de dificultad: ");
+  let sabor : number = rs.questionInt("Ingrese puntuacion de sabor (hasta 5): ");
+  let presentacion : number = rs.questionInt("Ingrese puntuacion de presentacion (hasta 5): ");
+  let dificultad : number = rs.questionInt("Ingrese puntuacion de dificultad (hasta 5): ");
 
 
   let puntaje : number = calcularPuntaje(sabor, presentacion, dificultad)
