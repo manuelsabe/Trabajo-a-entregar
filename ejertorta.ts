@@ -19,9 +19,20 @@ for (let i = 1; i <= numParticipantes; i++) {
 
   console.log("torta " + i);
   let sabor : number = rs.questionInt("Ingrese puntuacion de sabor (hasta 5): ");
+  if (sabor <= 0 || sabor > 5) {
+    console.error("ingrese un puntaje del 1 al 5!!");
+    sabor = rs.questionInt("Ingrese puntuacion de sabor (hasta 5): ");
+}
   let presentacion : number = rs.questionInt("Ingrese puntuacion de presentacion (hasta 5): ");
+  if (presentacion <= 0 || presentacion > 5) {
+    console.error("ingrese un puntaje del 1 al 5!!");
+    presentacion = rs.questionInt("Ingrese puntuacion de presentacion (hasta 5): ");
+}
   let dificultad : number = rs.questionInt("Ingrese puntuacion de dificultad (hasta 5): ");
-
+  if (dificultad <= 0 || dificultad > 5) {
+    console.error("ingrese un puntaje del 1 al 5!!");
+    dificultad = rs.questionInt("Ingrese puntuacion de dificultad (hasta 5): ");
+}
 
   let puntaje : number = calcularPuntaje(sabor, presentacion, dificultad)
 
@@ -40,5 +51,4 @@ if (esempate) {
   console.log("La ganadora es: " + ganador);
 }
 }
-
 determinarGanador();
