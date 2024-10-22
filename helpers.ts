@@ -33,8 +33,8 @@ export function comparar(arreglo: number[], i: number, j: number): number {
     let comparacion: number;
     if (arreglo[i] === arreglo[j]) {
         comparacion = 0;
-    } else if (arreglo[i] < arreglo[j]) {
-        comparacion = -1;
+    } else if (arreglo[i] > arreglo[j]) {    //Para que la consola imprima los numeros de manera descendente, hay que cambiar el: < por: >, en esta linea de codigo. 
+        comparacion = -1;                    //De esa manera los numeros mayores pasaran a la izquierda, y no los menores.  
     } else {
         comparacion = 1;
     }
